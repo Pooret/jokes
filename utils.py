@@ -1,9 +1,6 @@
-#TODO normalize color pallettes
-#TODO stats test of differnce between good/bag bigrams trigrams
-#TODO fix test size
-#TODO normalize text
-#TODO bar plots
-#TODO time leap year
+# TODO normalize color palettes
+# TODO add descriptions to functions
+# TODO naive bayes
 
 # imports
 import matplotlib.pyplot as plt
@@ -32,7 +29,6 @@ dads_jokes = [['Police car loses wheels to thief!', 'Cops are working tirelessly
              ['I had a patient that talked and talked and talked','It was clear that there needed to be an organization Similar to Q-Anon for compulive talkers called Onandon-andon'],
              ['My ex-wife still misses me.', 'But her aim is starting to improve.']]
 
-flags = ['wrong sub', 'sex', 'gay', 'black man', 'black people']
 
 def save_fig(fig_id, tight_layout=True, fig_extension="png", resolution=72):
     path = os.path.join(IMAGES_PATH, fig_id + "." + fig_extension)
