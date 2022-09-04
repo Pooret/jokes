@@ -10,6 +10,8 @@ The scores range from 0 - 142,733, with an avg of 139.7 $\pm$ 1674.0
 
 ## Data Sources and Wrangling
 
-The objective in wrangling the data is to create a dataset for binary classifications of jokes that are funny and not funny. To this end, I filtered for posts that weren't removed by the user or moderator, removed duplicates, and futher reduced the data to include posts that met criteria for my father (e.g. he doesn't use dirty jokes). To keep things simple to start, I removed jokes that contain numbers and emojis, but I can include these later as not much data were lost as a result. From those filtered data I took posts that were downvoted and took an equal amount of posts that are above a min_vote theshold. 
+The objective in wrangling the data is to create a dataset for binary classifications of jokes that are funny and not funny. To this end, I filtered for posts that weren't removed by the user or moderator, removed duplicates, and futher reduced the data to include posts that met criteria for my father (e.g. he doesn't use dirty jokes). Additionally, user edits, To keep things simple to start, I removed jokes that contain numbers and emojis, but I can include these later as not much data were lost as a result. From those filtered data I took posts that were downvoted and took an equal amount of posts that are above a min_vote theshold. 
 
-## Naive Bayes
+## Exploratory Data Analysis
+
+I read in the filtered training data and preprocessed the text 
