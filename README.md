@@ -1,40 +1,6 @@
-# Act I: Setup:
-
-## Introduction 
-**see springboard checklist and handson ml checklist**
-
-### Plot Point
-
-# Act II: Confrontration 
-**Predictive Analytics**
-  I predict __ is (funny|not funny) based off of (statistic / prob) + visual
-  *The data suggest that X is is (1|0) with **(likelylihood|with % prob|% certainty) as shown by _ fig:
-
-## Rising Actions
-**stakes get high**
-
-### Plot point
+# Introduction
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-## Brief Intro 
- \* state goal of project. 
-  (**see springboard checklist and handson ml checklist**) 
-
-*short blurb about the data. Sompre pretty pictures. Some conclusions.* 
-
-# Exposition # (what is the goal of the intro: to get data ready for predictive analytics and drive the story)
 
 ## Data Sources and Inital Explorations
 
@@ -45,8 +11,12 @@ The dataset was downloaded as a csv file, which has 1M posts from the r/Jokes su
 The scores range from 0 - 142,733, with an avg of 139.7 $\pm$ 1674.0
 
 ## [Data Wrangling](https://github.com/Pooret/jokes/blob/main/data%20wrangling.ipynb)
+###### It's time to wrangle up some nice n' juicy data!
+The first step in any data science project is take in the raw data and transform it so that it can then be readily fed into a pipeline for downstream analysis. The process by which the raw data is changed and manipulated into a more useable form is called data wrangling (*this is also know as data cleaning, data munging, or data remediation*). I prefer wrangling as it is an apt description of this process; on average, most of the hours spent working on a data science project will be alloted to this step, and it very much akin to wrestling unruly raw data into a more submissive, usable state that behaves well as it gets processed along the pipeline.
 
-The ultimate goal in wrangling these data is to create a dataset to classify a joke as either funny or not funny. The  and to this end, I filtered for posts that were relevant to further reduced the data to include posts that met criteria for my father (e.g. he doesn't use dirty jokes). Additionally, user edits, To keep things simple to start, I removed jokes that contain numbers and emojis, but I can include these later as not much data were lost as a result. From those filtered data I took posts that were downvoted and took an equal amount of posts that are above a min_vote threshold. 
+### Plan of attack
+We are going to be working mainly with text data as python strings, so I will be making heavy use of regular expressions for all steps of the data wrangling process. As this project's objective is to train a model that can classify between the funny (*the positive class*) and the un-funny (*the negative class*) jokes that my father sends, an ideal dataset to train this model on would contain an equal number positive and negative samples of my father's jokes. And while I could ask my father to send me a complete list of his jokes to use as training data (*I have a partial for validation purposes*), a model trained on this wouldn't generalize well given the sample I have from him for validation purposes is already limited and highly imbalanced. To get enough representative examples of his jokes, I will be using data from the [r/Jokes subreddit](https://www.reddit.com/r/Jokes/) and filtering it for content that most resembles his own. 
+
 
 ## Exploratory Data Analysis (Predictive Analytics)
 *What story do the data tell in regards to the target? i.e. what questions can I test my predictions? What are some assumptions backed by the data? (stats and probability just about makes assumptions from the data).
