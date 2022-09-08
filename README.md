@@ -17,11 +17,12 @@ The first step in any data science project is take in the raw data and transform
 ### Plan of attack
 We are going to be working mainly with text data as python strings, so I will be making heavy use of regular expressions for all steps of the data wrangling process. As this project's objective is to train a model that can classify between the funny (*the positive class*) and the un-funny (*the negative class*) jokes that my father sends, an ideal dataset to train this model on would contain an equal number positive and negative samples of my father's jokes. And while I could ask my father to send me a complete list of his jokes to use as training data (*I have a partial for validation purposes*), a model trained on this wouldn't generalize well given the sample I have from him for validation purposes is already limited and highly imbalanced. To get enough representative examples of his jokes, I will be using data from the [r/Jokes subreddit](https://www.reddit.com/r/Jokes/) and filtering it for content that most resembles his own. 
 
+For unicode characters, the emoji package contains the unicode strings compiled nicely for us by using emoji.get_emoji_regexp(). 
 
 ## Exploratory Data Analysis (Predictive Analytics)
 *What story do the data tell in regards to the target? i.e. what questions can I test my predictions? What are some assumptions backed by the data? (stats and probability just about makes assumptions from the data).
 
-__only include figures (2 best, 3 max) that show something important to story (what 
+__only include figures (2 best, 3 max) that show something important to story
 
 Objectives: 
  \* n-gram frequencies
