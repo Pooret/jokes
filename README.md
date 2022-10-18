@@ -1,3 +1,8 @@
+**TODO:**
+- prepare a dictionary of commonly mispelled words and corrected words
+- use helper datasets (https://www.kaggle.com/code/kyakovlev/jigsaw-general-helper-public/script)
+
+
 # Introduction
 
 
