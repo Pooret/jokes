@@ -14,6 +14,7 @@ The dataset was downloaded as a csv file, and contained 1M reddit postings from 
 
 "title" refers to the title of the post that the user creates. The "selftext" is the content of the post, and it is visible after a user clicks title. 
 
+![image](https://user-images.githubusercontent.com/64797107/196763792-7cabc910-c445-402f-9ec6-7cc48490454d.png)
 
 
 It's worth nothing that many jokes in this datatable don't  (*see NaNs*). The "score" value describes the number of upvotes, i.e. the number of positive ratings the post received. Posts can additionally be downvoted, and while reddit allows for negative values, the minimum value in the dataset is zero. When a user posts something to reddit, however, they are automatically given a single upvote, so I am making the assumption that values of zero in this dataset were downvoted. 
