@@ -2,21 +2,26 @@
 - prepare a dictionary of commonly mispelled words and corrected words
 - use helper datasets (https://www.kaggle.com/code/kyakovlev/jigsaw-general-helper-public/script)
 
-
 # Introduction
-
-
 
 ## Data Sources and Inital Explorations
 
 data source - [one-million-reddit-jokes](https://query.data.world/s/htrdsouy327xqa4w457qx6k6sjtj6r)
 
-The dataset was downloaded as a csv file, which has 1M posts from the r/Jokes subreddit. Of the relevant features, the "title" is the title's post or the joke's setup. The "selftext" is the punchline, or what you see once a user clicks on the post's content. It's worth nothing that many jokes in this datatable don't meet this criterion (*see NaNs*). The "score" value describes the number of upvotes, i.e. the number of positive ratings the post received. Posts can additionally be downvoted, and while reddit allows for negative values, the minimum value in the dataset is zero. When a user posts something to reddit, however, they are automatically given a single upvote, so I am making the assumption that values of zero in this dataset were downvoted. 
+The dataset was downloaded as a csv file, and contained 1M reddit postings from the r/Jokes subreddit, and stored in a Pandas DataFrame with dimensions (1000000, 12). The first ten rows with the text features and scores are shown here:
+
+![Screen Shot 2022-10-19 at 12 39 01 PM](https://user-images.githubusercontent.com/64797107/196752309-70664abd-bf38-4428-9d15-4aaeb7493e9c.png)
+
+"title" refers to the title of the post that the user creates. The "selftext" is the content of the post, and it is visible after a user clicks title. 
+
+
+
+It's worth nothing that many jokes in this datatable don't  (*see NaNs*). The "score" value describes the number of upvotes, i.e. the number of positive ratings the post received. Posts can additionally be downvoted, and while reddit allows for negative values, the minimum value in the dataset is zero. When a user posts something to reddit, however, they are automatically given a single upvote, so I am making the assumption that values of zero in this dataset were downvoted. 
 
 The scores range from 0 - 142,733, with an avg of 139.7 $\pm$ 1674.0
 
 ## [Data Wrangling](https://github.com/Pooret/jokes/blob/main/data%20wrangling.ipynb)
-###### It's time to wrangle up some nice n' juicy data!
+
 The first step in any data science project is take in the raw data and transform it so that it can then be readily fed into a pipeline for downstream analysis. The process by which the raw data is changed and manipulated into a more useable form is called data wrangling (*this is also know as data cleaning, data munging, or data remediation*). I prefer wrangling as it is an apt description of this process; on average, most of the hours spent working on a data science project will be alloted to this step, and it very much akin to wrestling unruly raw data into a more submissive, usable state that behaves well as it gets processed along the pipeline.
 
 ### Plan of attack
