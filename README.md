@@ -34,7 +34,11 @@ It's worth nothing that many jokes in this datatable don't  (*see NaNs*). The "s
 
 The scores range from 0 - 142,733, with an avg of 139.7 $\pm$ 1674.0
 
-## [Data Wrangling](https://github.com/Pooret/jokes/blob/main/data%20wrangling.ipynb)
+## [Data Cleaning](https://github.com/Pooret/jokes/blob/main/data%20wrangling.ipynb)
+
+
+
+
 
 The first step in any data science project is take in the raw data and transform it so that it can then be readily fed into a pipeline for downstream analysis. The process by which the raw data is changed and manipulated into a more useable form is called data wrangling (*this is also know as data cleaning, data munging, or data remediation*). I prefer wrangling as it is an apt description of this process; on average, most of the hours spent working on a data science project will be alloted to this step, and it very much akin to wrestling unruly raw data into a more submissive, usable state that behaves well as it gets processed along the pipeline.
 
