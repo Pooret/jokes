@@ -1,19 +1,4 @@
-**TODO:**
 
-19th:
-
-- prepare a dictionary of commonly mispelled words and corrected words
-- use helper datasets (https://www.kaggle.com/code/kyakovlev/jigsaw-general-helper-public/script)
-- finish data cleaning to prepare for data preparation
-
-20th:
-
-- data preparation
-- tokenization method for huggingface model
-
-21st:
-
-- Sentence Completion
 
 # Introduction
 
